@@ -39,7 +39,6 @@ class MyClient(discord.Client):
       await message.channel.send('#4)  !calc [num1] +,-,x,/ [num2] Calculates what you input!')
       await message.channel.send('')
     if message.content.startswith('!say'):
-    # Split off the command part ("!say ") to get the rest
       args = message.content.split(' ', 1)
       if len(args) > 1:
           await message.channel.send(args[1])
@@ -67,6 +66,7 @@ intents.message_content = True
 
 client = MyClient(intents=intents)
 client.run('Input bot-token here')
+
 
 
 
