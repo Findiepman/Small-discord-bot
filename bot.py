@@ -9,7 +9,7 @@ def get_meme():
   json_data = json.loads(response.text)
   return json_data['url']
 
-qoutes = ['Fin is tuff', 'Shamil is tuff', 'Help ik leef', 'Johannes 15:18']
+qoutes = ['Johannes 15:18', 'put more here!']
 
 def get_quote():
   quote = random.choice(qoutes)
@@ -55,9 +55,9 @@ class MyClient(discord.Client):
               result = eval(expression)
               await message.channel.send(f'Result: {result}')
           except:
-              await message.channel.send('⚠️ Fout bij berekening!')
+              await message.channel.send('⚠️ Mistake with calculation!')
       else:
-          await message.channel.send('❌ Alleen cijfers en + - * / ( ) zijn toegestaan!')
+          await message.channel.send('❌ only numbers and + - * / ( ) are allowed!')
 
 
     
@@ -66,6 +66,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
-client.run('MTQyNTU1NzY3NjQ1NjE0OTIxNA.G0mhsB.jH9-PYEWJ5lBN7PRIkvgEVCx5cG-fjhcukgH7g')
+client.run('Input bot-token here')
+
 
 
