@@ -9,7 +9,7 @@ def get_meme():
   json_data = json.loads(response.text)
   return json_data['url']
 
-qoutes = ['Johannes 15:18', 'put more here!']
+qoutes = ['John 15:18', 'put more here!']
 
 def get_quote():
   quote = random.choice(qoutes)
@@ -66,6 +66,7 @@ intents.message_content = True
 
 client = MyClient(intents=intents)
 client.run('Input bot-token here')
+
 
 
 
